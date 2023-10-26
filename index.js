@@ -6,6 +6,10 @@ app.get("/", (request, response) => {
     response.send("I am alive!");
 });
 
+app.get("/novo", (request, response) => {
+    response.send("I am new!");
+});
+
 app.get("/proba/:name", (request, response) => {
     console.log("Name:", request.params.name);
     response.send("Good day, " + request.params.name);
