@@ -36,7 +36,7 @@
                     <div>
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
-                                <span class="label-text">Provjera zaporke</span>
+                                <span class="label-text">Potvrda zaporke</span>
                             </div>
                             <input type="password" name="password_check" placeholder="Ponovite svoju zaporku"
                                 class="input input-bordered w-full max-w-xs" />
@@ -56,6 +56,32 @@
                         <p>
                             Dogodila se greška prilikom provjere podataka, provjerite svoj unos
                             i pokušajte ponovno!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+
+            {{#if result.database_error}}
+            <div class="mt-4">
+                <div class="card w-96 bg-error text-black">
+                    <div class="card-body">
+                        <h2 class="card-title">Greška!</h2>
+                        <p>
+                            Dogodila se greška prilikom spremanja podataka, kontaktirajte administratora!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+
+            {{#if result.email_in_use}}
+            <div class="mt-4">
+                <div class="card w-96 bg-error text-black">
+                    <div class="card-body">
+                        <h2 class="card-title">Greška!</h2>
+                        <p>
+                            E-mail adresa koju ste unijeli je već u upotrebi!
                         </p>
                     </div>
                 </div>
